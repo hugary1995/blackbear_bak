@@ -1,0 +1,12 @@
+[Tests]
+  issues = '#333'
+  [neml2_linear_elastic]
+    type = exodiff
+    input = 'fem.i'
+    exodiff = 'fem_out.e'
+    required_objects = 'TestNEML2StressUO TestNEML2Stress'
+    design = 'NEMLStress.md'
+    collections = 'SYSTEM'
+    requirement = 'BlackBear shall be capable of interfacing with the NEML2 library to perform constitutive update'
+  []
+[]
